@@ -26,7 +26,7 @@ public class EvalCommand extends UserCommand {
 
   /** Creates a menu for the user. */
   public void printValidCommands(boolean verboseField) {
-    Platform platform = Platform.instance();
+    Platform platform = getPlatform();
     platform.disableAll(verboseField);
     platform.outputMenu("", "", "");
     platform.outputMenu("1a.", "eval", "[post-order]");

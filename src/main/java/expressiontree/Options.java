@@ -2,10 +2,7 @@ package expressiontree;
 
 import expressiontree.platform.Platform;
 
-/**
- * @class Options
- * @brief This class implements the Singleton pattern to handle command-line option processing.
- */
+/** This class implements the Singleton pattern to handle command-line option processing. */
 public class Options {
   /** Are we running in verbose mode or not? */
   private boolean verbose = false;
@@ -16,7 +13,6 @@ public class Options {
   /** Method to return the one and only singleton uniqueInstance. */
   public static Options instance() {
     if (uniqueInstance == null) uniqueInstance = new Options();
-
     return uniqueInstance;
   }
 
@@ -26,7 +22,7 @@ public class Options {
   }
 
   /** Parse command-line arguments and set the appropriate values. */
-  public boolean parseArgs(String argv[]) {
+  public boolean parseArgs(String[] argv) {
     if (argv.length > 0) {
       if (argv[0].equals("-v")) verbose = true;
       else {
@@ -34,21 +30,21 @@ public class Options {
         return false;
       }
     }
-
     return true;
   }
 
   /** Print out usage and default values. */
   public void printUsage() {
     Platform platform = Platform.instance();
-    platform.errorLog("Options", "\nHelp Invoked on ");
-    platform.errorLog("Options", "[-h|-v] ");
+    String options = "Options";
+    platform.errorLog(options, "\nHelp Invoked on ");
+    platform.errorLog(options, "[-h|-v] ");
     platform.errorLog("", "");
     platform.errorLog("", "");
 
-    platform.errorLog("Options", "Usage: ");
-    platform.errorLog("Options", "-h: invoke help ");
-    platform.errorLog("Options", "-v: enter verbose mode \n");
+    platform.errorLog(options, "Usage: ");
+    platform.errorLog(options, "-h: invoke help ");
+    platform.errorLog(options, "-v: enter verbose mode \n");
   }
 
   /** Make the constructor private for a singleton. */

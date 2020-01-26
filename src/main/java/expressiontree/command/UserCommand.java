@@ -1,6 +1,7 @@
 package expressiontree.command;
 
 import expressiontree.TreeOps;
+import expressiontree.platform.Platform;
 
 /**
  * @class UserCommand
@@ -17,4 +18,8 @@ public abstract class UserCommand {
 
   /** Print the valid commands available to users. */
   public abstract void printValidCommands(boolean verboseField);
+
+  public Platform getPlatform() {
+    return Platform.instance();
+  }
 }

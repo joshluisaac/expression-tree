@@ -5,11 +5,10 @@ import expressiontree.expressiontree.ExpressionTree;
 import expressiontree.interpreter.Interpreter;
 
 /**
- * @class TreeOps
- * @brief Plays the role of the "Context" in the State pattern that ensures user operations on an
- *     expression tree are invoked according to the correct protocol. Most of its methods delegate
- *     to the corresponding methods in subclasses of the @a State base class, which then perform the
- *     requested operations.
+ * Plays the role of the "Context" in the State pattern that ensures user operations on an
+ * expression tree are invoked according to the correct protocol. Most of its methods delegate to
+ * the corresponding methods in subclasses of the @a State base class, which then perform the
+ * requested operations.
  */
 public class TreeOps {
 
@@ -47,7 +46,7 @@ public class TreeOps {
   }
 
   public void set(String keyValuePair) throws Exception {
-    String inputString = keyValuePair.replaceAll(" ", "");
+    String inputString = keyValuePair.replace(" ", "");
     int pos;
     if ((pos = inputString.indexOf('=')) != -1) {
       if (pos != 0 && pos < inputString.length() - 1) {

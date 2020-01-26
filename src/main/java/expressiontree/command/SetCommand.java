@@ -24,7 +24,7 @@ public class SetCommand extends UserCommand {
   }
 
   public void printValidCommands(boolean verboseField) {
-    Platform platform = Platform.instance();
+    Platform platform = getPlatform();
     platform.disableAll(verboseField);
     platform.outputLine("");
 

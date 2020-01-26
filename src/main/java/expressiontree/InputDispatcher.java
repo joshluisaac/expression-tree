@@ -56,7 +56,7 @@ public class InputDispatcher {
 
   public void dispatchAllInputs() {
     /** Continuously runs the InputHandler. */
-    while (inputDispatchingDone == false) {
+    while (!inputDispatchingDone) {
       try {
         inputHandler.handleInput();
       } catch (Exception e) {

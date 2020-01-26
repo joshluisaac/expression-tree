@@ -26,7 +26,7 @@ public class PrintCommand extends UserCommand {
 
   /** Print the valid commands available to users. */
   public void printValidCommands(boolean verboseField) {
-    Platform platform = Platform.instance();
+    Platform platform = getPlatform();
     platform.disableAll(verboseField);
     platform.outputMenu("", "", "");
     platform.outputMenu("1a.", "eval", "[post-order]");

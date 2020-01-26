@@ -1,7 +1,8 @@
 package expressiontree.command;
 
 import expressiontree.TreeOps;
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @class MacroCommand
@@ -10,13 +11,13 @@ import java.util.Vector;
  */
 public class MacroCommand extends UserCommand {
   /** Vector of commands that are executed as a macro. */
-  private Vector<UserCommand> macroCommands = new Vector<UserCommand>();
+  private List<UserCommand> macroCommands = new ArrayList<>();
 
   /** Expression input by the user. */
   private String expr;
 
   /** Constructor that provides the appropriate @a TreeOps and sequence of commands. */
-  public MacroCommand(TreeOps context, Vector<UserCommand> macroCommands) {
+  public MacroCommand(TreeOps context, List<UserCommand> macroCommands) {
     super.treeOps = context;
     this.macroCommands = macroCommands;
   }
