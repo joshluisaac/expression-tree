@@ -1,7 +1,7 @@
 package expressiontree.command;
 
-import expressiontree.TreeOps;
 import expressiontree.platform.Platform;
+import expressiontree.state.TreeOps;
 
 /**
  * @class ExprCommand

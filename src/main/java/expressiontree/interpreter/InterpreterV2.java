@@ -1,6 +1,7 @@
 package expressiontree.interpreter;
 
 import expressiontree.expressiontree.ExpressionTree;
+import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class InterpreterV2 {
@@ -20,12 +21,22 @@ public class InterpreterV2 {
   }
 
   private Deque<Symbol> buildParseTree(String inputExpression) {
-    return null;
+    Deque<Symbol> parseTree = new ArrayDeque<>();
+    for (int i = 0; i < inputExpression.length(); i++) {
+      parseTree = parseNextSymbol(inputExpression, i, false, parseTree);
+    }
+    return parseTree;
   }
 
   protected void optimizeParseTree(Deque<Symbol> parseTree) {}
 
   protected ExpressionTree buildExpressionTree(Deque<Symbol> parseTree) {
+    return null;
+  }
+
+  private Deque<Symbol> parseNextSymbol(
+      String inputExpression, int index, boolean handled, Deque<Symbol> parseTree) {
+
     return null;
   }
 }

@@ -1,11 +1,11 @@
 package expressiontree.inputhandler;
 
 import expressiontree.InputDispatcher;
-import expressiontree.TreeOps;
 import expressiontree.command.NullCommand;
 import expressiontree.command.UserCommand;
 import expressiontree.command.UserCommandFactory;
 import expressiontree.platform.Platform;
+import expressiontree.state.TreeOps;
 
 /**
  * @class InputHandler

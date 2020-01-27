@@ -1,6 +1,5 @@
-package expressiontree;
+package expressiontree.state;
 
-import expressiontree.State.UninitializedState;
 import expressiontree.expressiontree.ExpressionTree;
 import expressiontree.interpreter.Interpreter;
 
@@ -52,25 +51,24 @@ public class TreeOps {
       if (pos != 0 && pos < inputString.length() - 1) {
         String key = inputString.substring(0, pos);
         String value = inputString.substring(pos + 1);
-
         interpreter.symbolTable().set(key, Integer.parseInt(value));
       } else throw new Exception("Must be in the form key=value");
     } else throw new Exception("Must have = sign present");
   }
 
-  State state() {
+  public State state() {
     return state;
   }
 
-  void state(State newState) {
+  public void state(State newState) {
     this.state = newState;
   }
 
-  ExpressionTree tree() {
+  public ExpressionTree tree() {
     return tree;
   }
 
-  void tree(ExpressionTree newTree) {
+  public void tree(ExpressionTree newTree) {
     tree = newTree;
   }
 

@@ -1,7 +1,7 @@
 package expressiontree.command;
 
 import expressiontree.InputDispatcher;
-import expressiontree.TreeOps;
+import expressiontree.state.TreeOps;
 
 /**
  * @class QuitCommand

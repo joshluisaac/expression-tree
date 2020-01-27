@@ -1,6 +1,6 @@
 package expressiontree.command;
 
-import expressiontree.TreeOps;
+import expressiontree.state.TreeOps;
 import java.util.*;
 
 /**
@@ -74,10 +74,10 @@ public class UserCommandFactory {
     String parameters = "";
     String commandRequest = inputString;
 
-    int spacepos = inputString.indexOf(' ');
-    if (spacepos >= 0) {
-      parameters = inputString.substring(spacepos + 1);
-      commandRequest = inputString.substring(0, spacepos);
+    int spacePos = inputString.indexOf(' ');
+    if (spacePos >= 0) {
+      parameters = inputString.substring(spacePos + 1);
+      commandRequest = inputString.substring(0, spacePos);
     } else
       /** There's only a command, but no parameters. */
       ;

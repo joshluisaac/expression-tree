@@ -6,32 +6,28 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * @class SymbolTable
- * @brief This class stores variables and their values for use by the Interpreter. It plays the role
- *     of the "Context" in the Interpreter pattern.
+ * This class stores variables and their values for use by the Interpreter. It plays the role of the
+ * "Context" in the Interpreter pattern.
  */
 public class SymbolTable {
-  /** Hash table containing variable names and values. */
-  private HashMap<String, Integer> map = new HashMap<String, Integer>();
+  private Map<String, Integer> map = new HashMap<>();
 
-  /** Ctor */
   public SymbolTable() {}
 
   public int get(String variable) {
-    /** If variable isn't set then assign it a 0 value. */
-    if (map.get(variable) != null) return map.get(variable);
-    else {
+    Integer value = map.get(variable);
+    if (value != null) {
+      return value;
+    } else {
       map.put(variable, 0);
       return map.get(variable);
     }
   }
 
-  /** Set the value of a variable. */
   public void set(String variable, int value) {
     map.put(variable, value);
   }
 
-  /** Print all variables and their values as an aid for debugging. */
   public void print() {
     for (Iterator<Map.Entry<String, Integer>> it = map.entrySet().iterator(); it.hasNext(); ) {
       Map.Entry<String, Integer> x = it.next();

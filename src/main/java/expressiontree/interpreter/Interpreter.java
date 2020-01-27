@@ -295,7 +295,7 @@ public class Interpreter {
   private Stack<Symbol> handleParentheses(
       String inputExpression, int index, boolean handled, Stack<Symbol> masterParseTree) {
     accumulatedPrecedence += PAREN_PRECEDENCE;
-    Stack<Symbol> localParseTree = new Stack<Symbol>();
+    Stack<Symbol> localParseTree = new Stack<>();
     handled = false;
     for (++index; index < inputExpression.length(); ++index) {
       localParseTree = parseNextSymbol(inputExpression, index, handled, localParseTree);
