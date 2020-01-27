@@ -64,11 +64,11 @@ public class TreeOps {
     this.state = newState;
   }
 
-  public ExpressionTree tree() {
+  public ExpressionTree getExpressionTree() {
     return tree;
   }
 
-  public void tree(ExpressionTree newTree) {
+  public void setExpressionTree(ExpressionTree newTree) {
     tree = newTree;
   }
 

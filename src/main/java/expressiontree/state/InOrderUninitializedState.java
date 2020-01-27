@@ -13,14 +13,9 @@ public class InOrderUninitializedState extends UninitializedState {
    * Process the @a expression using a in-order interpreter and update the state of @a treeOps to
    * the @a InOrderInitializedState.
    */
+  @Override
   void makeTree(TreeOps treeOps, String inputExpression) {
-    /**
-     * Use the Interpreter and Builder patterns to create the expression tree designated by user
-     * input.
-     */
-    treeOps.tree(treeOps.interpreter().interpret(inputExpression));
-
-    /** Transition to the InOrderInitializedState. */
+    treeOps.setExpressionTree(treeOps.interpreter().interpret(inputExpression));
     treeOps.state(new InOrderInitializedState());
   }
 }

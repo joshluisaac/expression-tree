@@ -7,7 +7,7 @@ public class PreOrderInitializedState extends PreOrderUninitializedState {
 
   /** Print the current expression tree in the @a context using the designed @a format. */
   void print(TreeOps context, String format) {
-    State.printTree(context.tree(), format);
+    State.printTree(context.getExpressionTree(), format);
   }
 
   /**
