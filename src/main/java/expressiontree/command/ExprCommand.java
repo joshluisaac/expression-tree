@@ -13,9 +13,9 @@ public class ExprCommand extends UserCommand {
   private String expr;
 
   /** Constructor that provides the appropriate @a TreeOps and the requested expression. */
-  public ExprCommand(TreeOps context, String newexpr) {
+  public ExprCommand(TreeOps context, String expr) {
     super.treeOps = context;
-    expr = newexpr;
+    this.expr = expr;
   }
 
   /** Create the desired expression tree. */

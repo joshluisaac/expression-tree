@@ -16,6 +16,6 @@ public class InOrderUninitializedState extends UninitializedState {
   @Override
   void makeTree(TreeOps treeOps, String inputExpression) {
     treeOps.setExpressionTree(treeOps.interpreter().interpret(inputExpression));
-    treeOps.state(new InOrderInitializedState());
+    treeOps.setNextState(new InOrderInitializedState());
   }
 }

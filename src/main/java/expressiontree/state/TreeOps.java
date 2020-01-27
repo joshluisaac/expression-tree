@@ -56,12 +56,13 @@ public class TreeOps {
     } else throw new Exception("Must have = sign present");
   }
 
-  public State state() {
+  public State getState() {
     return state;
   }
 
-  public void state(State newState) {
+  public void setNextState(State newState) {
     this.state = newState;
+    System.out.println("State changed...");
   }
 
   public ExpressionTree getExpressionTree() {

@@ -1,6 +1,7 @@
 package expressiontree.platform;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @class PlatformFactory
@@ -8,17 +9,12 @@ import java.util.HashMap;
  *     implementation at runtime.
  */
 public class PlatformFactory {
-  /** This interface uses the Command pattern to create @a Platform implementations at runtime. */
-  private static interface IPlatformFactoryCommand {
-    public Platform execute();
-  }
 
   /**
    * HashMap used to map strings containing the Java platform names and dispatch the execute()
    * method of the associated @a Platform implementation.
    */
-  private HashMap<String, IPlatformFactoryCommand> platformMap =
-      new HashMap<String, IPlatformFactoryCommand>();
+  private Map<String, IPlatformFactoryCommand> platformMap = new HashMap<>();
 
   /**
    * Ctor that stores the objects that perform input and output for a particular platform, such as
@@ -69,7 +65,6 @@ public class PlatformFactory {
   /** Create a new @a Platform object based on underlying Java platform. */
   public Platform makePlatform() {
     String name = System.getProperty("java.specification.vendor");
-
     return platformMap.get(name).execute();
   }
 }

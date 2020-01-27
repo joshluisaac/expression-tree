@@ -16,7 +16,7 @@ public class UserCommandFactory {
   /**
    * This interface uses the Command pattern to create @a UserCommand implementations at runtime.
    */
-  private static interface IUserCommandFactoryCommand {
+  private interface IUserCommandFactoryCommand {
     UserCommand execute(String param);
   }
 
