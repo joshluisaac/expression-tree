@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="514.0" y="237.0">expressiontree.state.PostOrderInitializedState</node>
+    <node x="0.0" y="158.0">expressiontree.state.LevelOrderUninitializedState</node>
+    <node x="271.0" y="237.0">expressiontree.state.InOrderInitializedState</node>
+    <node x="264.0" y="158.0">expressiontree.state.InOrderUninitializedState</node>
+    <node x="7.0" y="237.0">expressiontree.state.LevelOrderInitializedState</node>
+    <node x="413.5" y="79.0">expressiontree.state.UninitializedState</node>
+    <node x="459.0" y="0.0">expressiontree.state.State</node>
+    <node x="771.0" y="237.0">expressiontree.state.PreOrderInitializedState</node>
+    <node x="507.0" y="158.0">expressiontree.state.PostOrderUninitializedState</node>
+    <node x="764.0" y="158.0">expressiontree.state.PreOrderUninitializedState</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="expressiontree.state.InOrderInitializedState" target="expressiontree.state.InOrderUninitializedState">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="expressiontree.state.LevelOrderInitializedState" target="expressiontree.state.LevelOrderUninitializedState">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="expressiontree.state.PostOrderUninitializedState" target="expressiontree.state.UninitializedState">
+      <point x="0.0" y="-14.5" />
+      <point x="625.5" y="138.0" />
+      <point x="522.25" y="138.0" />
+      <point x="21.75" y="14.5" />
+    </edge>
+    <edge source="expressiontree.state.PostOrderInitializedState" target="expressiontree.state.PostOrderUninitializedState">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="expressiontree.state.PreOrderUninitializedState" target="expressiontree.state.UninitializedState">
+      <point x="0.0" y="-14.5" />
+      <point x="879.0" y="128.0" />
+      <point x="565.75" y="128.0" />
+      <point x="65.25" y="14.5" />
+    </edge>
+    <edge source="expressiontree.state.UninitializedState" target="expressiontree.state.State">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="expressiontree.state.LevelOrderUninitializedState" target="expressiontree.state.UninitializedState">
+      <point x="0.0" y="-14.5" />
+      <point x="122.0" y="128.0" />
+      <point x="435.25" y="128.0" />
+      <point x="-65.25" y="14.5" />
+    </edge>
+    <edge source="expressiontree.state.PreOrderInitializedState" target="expressiontree.state.PreOrderUninitializedState">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="expressiontree.state.InOrderUninitializedState" target="expressiontree.state.UninitializedState">
+      <point x="0.0" y="-14.5" />
+      <point x="375.5" y="138.0" />
+      <point x="478.75" y="138.0" />
+      <point x="-21.75" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="451.5" y="147.5" />
+  <SelectedNodes>
+    <node>expressiontree.state.PreOrderUninitializedState</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
