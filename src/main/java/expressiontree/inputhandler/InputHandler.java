@@ -49,7 +49,7 @@ public abstract class InputHandler {
    * Factory that creates the appropriate subclass of @a InputHandler, i.e., @a
    * VerboseModeInputHandler or @a * SuccinctModeInputHandler.
    */
-  public static InputHandler makeHandler(
+  public static InputHandler createHandler(
       boolean verbose, Object input, Object output, Object activity) {
     globalInput = input;
     globalOutput = output;

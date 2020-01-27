@@ -1,5 +1,7 @@
 package expressiontree.platform;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -9,6 +11,8 @@ import java.util.Scanner;
  * @brief This class is used to retrieve and output data from a console window. It plays the role of
  *     the "Concrete Strategy" in the Strategy pattern.
  */
+
+@Slf4j
 public class CommandLinePlatform extends Platform {
   /** Contains information for grabbing input from console window. */
   InputStream input;
@@ -30,13 +34,14 @@ public class CommandLinePlatform extends Platform {
 
   /** Returns the string parameter to the console window followed by a line. */
   public String outputLine(String line) {
-    this.output.println(line);
+    log.info("Result: {}",line);
     return line;
   }
 
   /** Returns the string parameter to the console window (not followed by newLine character). */
   public String outputString(String string) {
-    this.output.print(string);
+    log.info(string);
+    //this.output.print(string);
     return string;
   }
 
@@ -52,7 +57,8 @@ public class CommandLinePlatform extends Platform {
 
   /** Depending on the platform, shows the user possible commands. e.g. Format [in-order]. */
   public void outputMenu(String numeral, String option, String selection) {
-    output.println(numeral + " " + option + " " + selection);
+    log.info("{} {} {}",numeral,option,selection);
+    //output.println(numeral + " " + option + " " + selection);
   }
 
   /** Enables the respective option in Android (no-op in commandLine). */
@@ -68,7 +74,8 @@ public class CommandLinePlatform extends Platform {
    * implementation.
    */
   public String addString(String output) {
-    this.output.print(output);
+    //this.output.print(output);
+    log.info(output);
     return output;
   }
 

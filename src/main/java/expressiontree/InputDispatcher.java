@@ -20,29 +20,16 @@ public class InputDispatcher {
   /** Method to return the one and only singleton instance. */
   public static InputDispatcher instance() {
     if (uniqueInstance == null) uniqueInstance = new InputDispatcher();
-
     return uniqueInstance;
   }
 
-  public void makeHandler(boolean verbose, Object input, Object output, Object activity) {
-    /**
-     * Create an InputHandler that takes the following parameters: boolean (to determine verbose or
-     * succinct) input (An EditText object for the android GUI) NULL for commandLine output (A
-     * TextView object for the android GUI) NULL for commandLIne activity(An Activity object for the
-     * android GUI) NULL for commandLine
-     */
-    inputHandler = InputHandler.makeHandler(verbose, input, output, activity);
+  public void createHandler(boolean verbose, Object input, Object output, Object activity) {
+    inputHandler = InputHandler.createHandler(verbose, input, output, activity);
   }
 
   public void makeHandlerAndPromptUser(
       boolean verbose, Object input, Object output, Object activity) {
-    /**
-     * Create an InputHandler that takes the following parameters: boolean (to determine verbose or
-     * succinct) input (An EditText object for the android GUI) NULL for commandLine output (A
-     * TextView object for the android GUI) NULL for commandLIne activity(An Activity object for the
-     * android GUI) NULL for commandLine
-     */
-    inputHandler = InputHandler.makeHandler(verbose, input, output, activity);
+    inputHandler = InputHandler.createHandler(verbose, input, output, activity);
     inputHandler.promptUser();
   }
 

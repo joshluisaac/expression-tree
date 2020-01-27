@@ -43,11 +43,7 @@ public class PlatformFactory {
      */
     platformMap.put(
         "Sun Microsystems Inc.",
-        new IPlatformFactoryCommand() {
-          public Platform execute() {
-            return new CommandLinePlatform(input, output);
-          }
-        });
+            () -> new CommandLinePlatform(input, output));
 
     /**
      * The "Oracle Corporation" string maps to a command object that creates an @a
@@ -55,11 +51,7 @@ public class PlatformFactory {
      */
     platformMap.put(
         "Oracle Corporation",
-        new IPlatformFactoryCommand() {
-          public Platform execute() {
-            return new CommandLinePlatform(input, output);
-          }
-        });
+            () -> new CommandLinePlatform(input, output));
   }
 
   /** Create a new @a Platform object based on underlying Java platform. */
